@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/cvImp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:cardCornerRadius="10dp"
+        android:background="@color/colorAccent"
+        xmlns:android="http://schemas.android.com/apk/res/android" >
+        
+        
+        <TextView
+                android:id="@+id/tvDateNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="30"
+                />
+        
+</android.support.v7.widget.CardView>
