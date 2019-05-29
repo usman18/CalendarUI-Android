@@ -1,3 +1,4 @@
 <resources>
         <string name="app_name">CalendarUI</string>
+        <string name="upcoming_events">Upcoming Events</string>
 </resources>
