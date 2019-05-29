@@ -1,10 +1,13 @@
 package com.uk.calendarui.Activities;
 
+import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.Window;
+import android.view.WindowManager;
 
 import com.uk.calendarui.Adapters.DatesAdapter;
 import com.uk.calendarui.Adapters.EventsAdapter;
@@ -16,6 +19,12 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 	
+	private RecyclerView rvDates;
+	private RecyclerView rvEvents;
+	
+	private ArrayList<Date> dates;
+	private ArrayList<Event> events;
+	
 	private final int offset = 2;
 	
 	@Override
@@ -23,14 +32,25 @@ public class MainActivity extends AppCompatActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
+		init();
+		populateDates();
+		populateEvents();
 		
-		RecyclerView rvDates = findViewById(R.id.rvDates);
-		RecyclerView rvEvents = findViewById(R.id.rvEvents);
 		
+	}
+	
+	private void init() {
 		
-		ArrayList<Date> dates = new ArrayList<>();
-		ArrayList<Event> events = new ArrayList<>();
+		rvDates = findViewById(R.id.rvDates);
+		rvEvents = findViewById(R.id.rvEvents);
 		
+		dates = new ArrayList<>();
+		events = new ArrayList<>();
+		
+	}
+	
+	
+	private void populateDates() {
 		
 		//Adding empty objects for offset
 		for (int i = 0; i < offset; i++) {
@@ -57,6 +77,9 @@ public class MainActivity extends AppCompatActivity {
 		rvDates.setHasFixedSize(true);
 		rvDates.setAdapter(adapter);
 		
+	}
+	
+	private void populateEvents() {
 		
 		events.add(new Event("Meeting with Nix", "Today, 21:00 - 22:00"));
 		events.add(new Event("Work", "01/08, 09:00 - 17:00"));
@@ -68,4 +91,6 @@ public class MainActivity extends AppCompatActivity {
 		rvEvents.setAdapter(eventsAdapter);
 		
 	}
+	
+	
 }

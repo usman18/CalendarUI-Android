@@ -3,6 +3,7 @@
         <color name="colorPrimary">#1b1b1b</color>
         <color name="colorPrimaryDark">#020202</color>
         <color name="colorAccent">#D81B60</color>
+        <!--<color name="colorAccent">#f8757a</color>-->
         <color name="white">#ffffff</color>
         <color name="black_light">#2b2726</color>
         <color name="today_card">#f8f8f8</color>

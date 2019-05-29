@@ -55,7 +55,7 @@
                                                 android:layout_weight="1"
                                                 android:text="T"
                                                 android:textAlignment="center"
-                                                android:textColor="@color/colorAccent"
+                                                android:textColor="@color/white"
                                                 android:textSize="16sp" />
                                         
                                         <TextView
@@ -64,7 +64,7 @@
                                                 android:layout_weight="1"
                                                 android:text="W"
                                                 android:textAlignment="center"
-                                                android:textColor="@color/white"
+                                                android:textColor="@color/colorAccent"
                                                 android:textSize="16sp" />
                                         
                                         <TextView
