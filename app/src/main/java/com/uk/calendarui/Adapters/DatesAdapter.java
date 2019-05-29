@@ -32,9 +32,20 @@ public class DatesAdapter extends RecyclerView.Adapter<DatesAdapter.DatesViewHol
 	
 	@Override
 	public void onBindViewHolder(@NonNull DatesViewHolder datesViewHolder, int i) {
-		datesViewHolder.tvDayNumber.setText(dates.get(i).getNumber());
 		
-		if (dates.get(i).isImp()) {
+		Date date = dates.get(i);
+		
+		if (date.getNumber().equals("")) {
+			//Empty object for offset
+			datesViewHolder.cvImportant.setVisibility(View.INVISIBLE);
+			return;
+		}
+		
+		datesViewHolder.cvImportant.setVisibility(View.VISIBLE);
+		
+		datesViewHolder.tvDayNumber.setText(date.getNumber());
+		
+		if (date.isImp()) {
 			datesViewHolder.tvDayNumber.setTextColor(context.getResources().getColor(R.color.white));
 			datesViewHolder.cvImportant.setCardBackgroundColor(context.getResources().getColor(R.color.colorAccent));
 		} else  {

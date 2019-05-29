@@ -2,6 +2,7 @@ package com.uk.calendarui.Adapters;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -34,6 +35,12 @@ public class EventsAdapter extends RecyclerView.Adapter<EventsAdapter.EventsView
 	public void onBindViewHolder(@NonNull EventsViewHolder eventsViewHolder, int i) {
 		Event event = events.get(i);
 		
+		if (event.getDescription().contains("Today")) {
+			eventsViewHolder.card.setCardBackgroundColor(context.getResources().getColor(R.color.today_card));
+		}else {
+			eventsViewHolder.card.setCardBackgroundColor(context.getResources().getColor(R.color.other_cards));
+		}
+		
 		eventsViewHolder.tvName.setText(event.getName());
 		eventsViewHolder.tvDescription.setText(event.getDescription());
 		
@@ -50,11 +57,13 @@ public class EventsAdapter extends RecyclerView.Adapter<EventsAdapter.EventsView
 	class EventsViewHolder extends RecyclerView.ViewHolder {
 		TextView tvName;
 		TextView tvDescription;
+		CardView card;
 		
 		EventsViewHolder(@NonNull View itemView) {
 			super(itemView);
 			tvName = itemView.findViewById(R.id.tvEventName);
 			tvDescription = itemView.findViewById(R.id.tvEventDescription);
+			card = itemView.findViewById(R.id.card);
 		}
 	}
 
