@@ -1,24 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-       >
+        android:background="@color/black_light"
+        >
         
         <android.support.design.widget.AppBarLayout
+                android:id="@+id/appBarLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/colorPrimary"
-                >
+                android:background="@color/colorPrimary">
+                
                 <android.support.design.widget.CollapsingToolbarLayout
                         android:id="@+id/collapsingToolbar"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-        
+                        android:layout_height="wrap_content"
+                        app:contentScrim="?attr/colorPrimary"
+                        app:layout_scrollFlags="scroll|exitUntilCollapsed">
+                        
                         <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="vertical"
-                                >
+                                android:orientation="vertical">
+                                
                                 <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
@@ -27,100 +32,116 @@
                                         android:text="March 2019"
                                         android:textColor="@color/white"
                                         android:textSize="20sp" />
-        
+                                
                                 <LinearLayout
                                         android:layout_width="match_parent"
                                         android:layout_height="0dp"
                                         android:layout_marginTop="20dp"
                                         android:layout_weight="7"
                                         android:orientation="horizontal">
-                
+                                        
                                         <TextView
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
                                                 android:layout_weight="1"
+                                                android:text="M"
                                                 android:textAlignment="center"
-                                                android:textSize="16sp"
                                                 android:textColor="@color/white"
-                                                android:text="M" />
-                
+                                                android:textSize="16sp" />
+                                        
                                         <TextView
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
                                                 android:layout_weight="1"
+                                                android:text="T"
                                                 android:textAlignment="center"
-                                                android:textSize="16sp"
                                                 android:textColor="@color/colorAccent"
-                                                android:text="T" />
-                
+                                                android:textSize="16sp" />
+                                        
                                         <TextView
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
                                                 android:layout_weight="1"
+                                                android:text="W"
                                                 android:textAlignment="center"
-                                                android:textSize="16sp"
                                                 android:textColor="@color/white"
-                                                android:text="W" />
-                
+                                                android:textSize="16sp" />
+                                        
                                         <TextView
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
                                                 android:layout_weight="1"
+                                                android:text="T"
                                                 android:textAlignment="center"
-                                                android:textSize="16sp"
                                                 android:textColor="@color/white"
-                                                android:text="T" />
-                
+                                                android:textSize="16sp" />
+                                        
                                         <TextView
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
                                                 android:layout_weight="1"
+                                                android:text="F"
                                                 android:textAlignment="center"
-                                                android:textSize="16sp"
                                                 android:textColor="@color/white"
-                                                android:text="F" />
-                
+                                                android:textSize="16sp" />
+                                        
                                         <TextView
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
                                                 android:layout_weight="1"
-                                                android:textSize="16sp"
+                                                android:text="S"
                                                 android:textAlignment="center"
                                                 android:textColor="@color/white"
-                                                android:text="S" />
-                
+                                                android:textSize="16sp" />
+                                        
                                         <TextView
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
                                                 android:layout_weight="1"
+                                                android:text="S"
                                                 android:textAlignment="center"
-                                                android:textSize="16sp"
                                                 android:textColor="@color/white"
-                                                android:text="S" />
+                                                android:textSize="16sp" />
                                 </LinearLayout>
-        
+                                
                                 <LinearLayout
                                         android:layout_width="match_parent"
                                         android:layout_height="0.5dp"
-                                        android:background="@color/white"
                                         android:layout_marginTop="8dp"
                                         android:layout_marginBottom="8dp"
-                                        />
+                                        android:background="@color/white" />
                                 
-                        </LinearLayout>
-        
+                                
+                                <android.support.v7.widget.RecyclerView
+                                        android:id="@+id/rvDates"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="24dp" />
                         
-                </android.support.design.widget.CollapsingToolbarLayout>
+                        </LinearLayout>
+                        
                 
-                <android.support.v7.widget.RecyclerView
-                        android:id="@+id/rvDates"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="12dp"
-                        />
+                </android.support.design.widget.CollapsingToolbarLayout>
         
         </android.support.design.widget.AppBarLayout>
         
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvEvents"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:nestedScrollingEnabled="true"
+                />
+        
+        <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_anchor="@id/appBarLayout"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_action_add"
+                app:layout_anchorGravity="bottom|right|end"
+                />
 
-
+        
 </android.support.design.widget.CoordinatorLayout>
