@@ -2,7 +2,7 @@
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        xmlns:app="http://schemas.android.com/apk/res-auto">
+       >
         
         <android.support.design.widget.AppBarLayout
                 android:layout_width="match_parent"
@@ -39,6 +39,7 @@
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
                                                 android:layout_weight="1"
+                                                android:textAlignment="center"
                                                 android:textSize="16sp"
                                                 android:textColor="@color/white"
                                                 android:text="M" />
@@ -47,6 +48,7 @@
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
                                                 android:layout_weight="1"
+                                                android:textAlignment="center"
                                                 android:textSize="16sp"
                                                 android:textColor="@color/colorAccent"
                                                 android:text="T" />
@@ -55,6 +57,7 @@
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
                                                 android:layout_weight="1"
+                                                android:textAlignment="center"
                                                 android:textSize="16sp"
                                                 android:textColor="@color/white"
                                                 android:text="W" />
@@ -63,6 +66,7 @@
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
                                                 android:layout_weight="1"
+                                                android:textAlignment="center"
                                                 android:textSize="16sp"
                                                 android:textColor="@color/white"
                                                 android:text="T" />
@@ -71,6 +75,7 @@
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
                                                 android:layout_weight="1"
+                                                android:textAlignment="center"
                                                 android:textSize="16sp"
                                                 android:textColor="@color/white"
                                                 android:text="F" />
@@ -80,6 +85,7 @@
                                                 android:layout_height="wrap_content"
                                                 android:layout_weight="1"
                                                 android:textSize="16sp"
+                                                android:textAlignment="center"
                                                 android:textColor="@color/white"
                                                 android:text="S" />
                 
@@ -87,6 +93,7 @@
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
                                                 android:layout_weight="1"
+                                                android:textAlignment="center"
                                                 android:textSize="16sp"
                                                 android:textColor="@color/white"
                                                 android:text="S" />
@@ -109,6 +116,7 @@
                         android:id="@+id/rvDates"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
                         />
         
         </android.support.design.widget.AppBarLayout>
