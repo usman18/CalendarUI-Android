@@ -2,7 +2,8 @@
 
 A Calendar App(Dark theme) beautiful User Interface in Android ❤️
 
-It was created so that other developers can scale upon it in without wasting time on UI or tweaking the existing UI.
+It is inspired by [this post](https://www.instagram.com/p/BrvEsrknG2J/?utm_source=ig_web_options_share_sheet) and
+was created so that other developers can tweak the existing UI or scale upon it in without wasting time on UI.
 
 
 ## ScreenShots
@@ -13,6 +14,8 @@ It was created so that other developers can scale upon it in without wasting tim
 ## Contributions
 Contributions are always welcome. Please fork this repository and contribute using pull requests.
 
-## Inspiration
+## Lets become friends
+- [LinkedIn](https://www.linkedin.com/in/usman-khan-7b04b1138)
+- [Github](https://github.com/usman18)
 
-The design is inspired by this [Instagram Post](https://www.instagram.com/p/BrvEsrknG2J/?utm_source=ig_web_options_share_sheet)
+My email : uk32971@gmail.com
