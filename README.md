@@ -8,7 +8,7 @@ was created so that other developers can tweak the existing UI or scale upon it 
 
 ## ScreenShots
 
-<img height=600 width=350 src="https://github.com/usman18/CalendarUI-Android/blob/master/ScreenShots/IMG_20190529_210214.JPG" hspace=40/><img height=600 width=350 src="https://github.com/usman18/CalendarUI-Android/blob/master/ScreenShots/IMG_20190529_210224.JPG"/> 
+<img height=600 width=325 src="https://github.com/usman18/CalendarUI-Android/blob/master/ScreenShots/IMG_20190529_210214.JPG" hspace=40/><img height=600 width=325 src="https://github.com/usman18/CalendarUI-Android/blob/master/ScreenShots/IMG_20190529_210224.JPG"/> 
 
 
 ## Contributions
